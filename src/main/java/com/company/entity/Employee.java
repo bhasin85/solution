@@ -13,6 +13,11 @@ public class Employee {
     }
 
 
+    @Override
+    public String toString() {
+        return "name:" + this.name + " id:"+ id + " mid:" + mid;
+    }
+
     public String getName() {
         return name;
     }
@@ -24,4 +29,5 @@ public class Employee {
     public Integer getMid() {
         return mid;
     }
+
 }
