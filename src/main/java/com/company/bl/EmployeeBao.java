@@ -55,4 +55,23 @@ public class EmployeeBao {
     public Employee getCeo() {
         return ceo;
     }
+
+    public void prettyPrint() {
+        if (this.ceo != null)
+            this.prettyPrint(this.ceo.getName(), "--");
+    }
+
+    private void prettyPrint(String manager, String prefix) {
+//        print("{}>{}".format(prefix, manager))
+//        if manager in relationships:
+//        for employee in relationships[manager]:
+//        self._pretty_print(employee, relationships, prefix+"--")
+
+        System.out.println(prefix + ">" + manager);
+        if (this.relationships.containsKey(manager)) {
+            for (String employee : relationships.get(manager)) {
+                this.prettyPrint(employee, prefix + "--");
+            }
+        }
+    }
 }
