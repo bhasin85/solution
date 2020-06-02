@@ -1,12 +1,12 @@
 package com.company.entity;
 
-public class Row {
+public class Employee {
 
     private String name;
     private Integer id;
     private Integer mid;
 
-    Row(String name, Integer id, Integer mid) {
+    public Employee(String name, Integer id, Integer mid) {
         this.name = name;
         this.id = id;
         this.mid = mid;
